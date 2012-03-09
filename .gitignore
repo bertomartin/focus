@@ -1,3 +1,4 @@
 sites/default/settings.php
 sites/all/modules/question_answer
 nbproject
+.htaccess
