@@ -106,15 +106,28 @@ h1.welcome{
   margin-right:10px;
 }
 .main-content .side-content{
-  
-}
-
-.main-content .side-content .about{
   background-color: #e17628;
   color:#fff;
   text-align:center;
   xpadding:5px;
   padding-bottom:5px;
+  
+}
+.main-content .side-content .content{
+  background-color:inherit;
+}
+
+.main-content .side-content h2.block-title{
+  color:#fff;
+  font-size: 2.5em;
+}
+
+.main-content .side-content .about{
+  xbackground-color: #e17628;
+  xxcolor:#fff;
+  xtext-align:center;
+  xpadding:5px;
+  xpadding-bottom:5px;
 }
 .main-content .side-content .about h2{
   color:#fff;
