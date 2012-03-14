@@ -54,7 +54,7 @@
               <?php endif; ?>
 
               <?php if ($title): ?>
-                <h1 class="title"><?php print $title; ?></h1>
+                <h1 class="title"><?php //print $title; ?></h1>
               <?php endif; ?>
 
               <?php print $messages; ?>
@@ -72,29 +72,20 @@
           <?php endif; ?>
             
           <div id="content-area">
+            	<?php if(drupal_is_front_page()) {unset($page['content']['system_main']['default_message']);} ?>
+                       
              <?php print render($page['content']) ?>
+            
           </div>
 
           
-          <h1 class="welcome">Welcome to Focused Fitness NYC</h1>
-          <p>With Focused Fitness NYC the pain you gain is the Pain of Wellness
-When you become our client you have taken the first positive step in choosing a LIFESTYLE OF WELLNESS.  That lifestyle DOES NOT require you to become a gym rat or a member of the food police.  It does mean making some changes though that will help you improve your life all around. </p>
           
-          <hr/>
           
         </div>
         
         
         
         <div class="five columns side-content">
-          <div class="about">
-            <h2>About Me</h2>
-            <img class="profile-pic" src="<?php echo $theme_path ?>/images/photo.jpg">
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec euismod nunc id magna euismod eu vestibulum diam interdum.</p>
-            <p>Phasellus nec libero ut arcu consectetur tempus. Etiam luctus congue velit, sed venenatis risus tempus vitae. Etiam quis felis metus, non faucibus lacus.</p>
-            <h2>Get in Touch</h2>
-            <p>contact form</p>
-          </div><!-- /about -->
           
           <?php print render($page['sidebar_second']); ?>
           

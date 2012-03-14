@@ -29,6 +29,8 @@ stylesheets[all][] = css/foundation.css
 stylesheets[all][] = css/app.css
 stylesheets[print][] = css/print.css
 
+scripts[] = js/focusfitnessnyc.js
+
 settings[basic_tabs] = 1
 settings[basic_breadcrumb_separator] = »
 settings[wireframe_mode] = 0

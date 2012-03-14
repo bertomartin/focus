@@ -1,0 +1,4 @@
+name = Question and Answer Overrides
+description = This module allows the redirection to the question view after an answer had been submitted.
+package = Focus
+core = 7.x

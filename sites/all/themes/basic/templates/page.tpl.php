@@ -83,14 +83,6 @@
         
         
         <div class="four columns side-content">
-          <div class="about">
-            <h2>About Me</h2>
-            <img class="profile-pic" src="/<?php echo $theme_path ?>/images/photo.jpg">
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec euismod nunc id magna euismod eu vestibulum diam interdum.</p>
-            <p>Phasellus nec libero ut arcu consectetur tempus. Etiam luctus congue velit, sed venenatis risus tempus vitae. Etiam quis felis metus, non faucibus lacus.</p>
-            <h2>Get in Touch</h2>
-            <p>contact form</p>
-          </div><!-- /about -->
           
           <?php print render($page['sidebar_second']); ?>
           

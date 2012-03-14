@@ -12,6 +12,10 @@ body{
   background-image: url(../images/bg.jpg);
   background-repeat:repeat;
   height: 100%;
+  font-size: 1.3em;
+}
+.row{
+  max-width: 1020px;
 }
 
 a.logo{
@@ -29,11 +33,12 @@ a.logo{
 
 ul.navbar{
   margin-left: 0;
-  margin-bottom: 18px;
+  margin-bottom: 0;
   list-style: none;
 }
 ul.navbar li{
   float: left;
+  margin-bottom: 0;
 }
 ul.navbar li a{
   display: block;
@@ -54,6 +59,9 @@ border-radius: 5px;
 font-weight:bold;
 color:#fff;
 font-size: 1.6em;
+
+padding-top:10px;
+padding-bottom: 14px;
 
 /* active */
 /*color: white;
@@ -98,8 +106,8 @@ h1.welcome{
   margin-bottom:0;
 }
 .main-content .content p{
-  padding:10px;
-  font-size:1.3em;
+  xpadding:10px;
+  xfont-size:1.3em;
 }
 .main-content .content hr{
   margin-left:10px;
@@ -108,7 +116,7 @@ h1.welcome{
 .main-content .side-content{
   background-color: #e17628;
   color:#fff;
-  text-align:center;
+  xtext-align:center;
   xpadding:5px;
   padding-bottom:5px;
   
@@ -121,14 +129,34 @@ h1.welcome{
   color:#fff;
   font-size: 2.5em;
 }
+#block-views-about_me-block h3, #block-views-contact_me-block h2 a{display:none;}
+/*.main-content .side-content h2 a, .main-content .side-content h3 a{
+  display:none;
+}*/
 
-.main-content .side-content .about{
-  xbackground-color: #e17628;
-  xxcolor:#fff;
-  xtext-align:center;
-  xpadding:5px;
-  xpadding-bottom:5px;
+.region-sidebar-second{
+  xpadding:10px;
+  xpadding-top:0;
 }
+.region-sidebar-second h2.block-title{
+  background-color: black;
+padding: 7px;
+}
+
+.main-content .side-content .about-image{
+  width:334px;
+  margin: 0 auto;
+  text-align: center;
+}
+.main-content .side-content .about-image img{
+  border:3px solid #fff;
+}
+
+.main-content .side-content .block-inner .content{
+  padding:10px;
+  padding-top:0;
+}
+
 .main-content .side-content .about h2{
   color:#fff;
   padding-top:10px;
@@ -190,7 +218,56 @@ xwidth: 100%;
 
 }*/
 
+/* contact form */
+#block-views-contact_me-block .form-text{
+  font-size: 13px;
+padding: 4px 3px 2px;
+background: white;
+width:inherit;
+}
+#block-views-contact_me-block input.form-text{
+  width:260px;
+}
+#block-views-contact_me-block .node-webform p{
+  font-size:1.5em;
+  font-style: italic;
+}
 
+/* in the main content area */
+.node-webform input.form-text{
+  width:274px;
+  font-size: 13px;
+padding: 4px 3px 2px;
+background: white;
+}
+
+.node-webform textarea{
+  xwidth: 500px;
+xbox-sizing: border-box;
+xx-webkit-box-sizing: border-box;
+x-moz-box-sizing: border-box;
+}
+
+
+/* main page titles */
+h1.title{
+  background-color:#ccc;
+  padding:5px;
+  border-bottom: 2px solid #333;
+  color:#424242;
+}
+
+
+/* content area */
+#content-area{
+  padding:10px;
+}
+#content-area img, #content-area object, #content-area embed{
+  height: inherit;
+}
+#content-area object, #content-area embed{
+  height: 360px;
+}
 
 
 /* -----------------------------------------

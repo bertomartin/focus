@@ -242,7 +242,7 @@
 	.row .offset-by-ten:first-child 	{ margin-left: 87%;  }
 	.row .offset-by-eleven:first-child 	{ margin-left: 95.7%;  }
 	
-	img, object, embed { max-width: 100%; height: auto; }
+	img, object, embed { max-width: 100%; xheight: auto; }
 	img { -ms-interpolation-mode: bicubic; }
 	 
 	 /* Nicolas Gallagher's micro clearfix */
