@@ -74,7 +74,11 @@
           <div id="content-area">
             	<?php if(drupal_is_front_page()) {unset($page['content']['system_main']['default_message']);} ?>
                        
-             <?php print render($page['content']) ?>
+             <?php //print render($page['content']) ?>
+            <?php
+            $viewName = 'welcome';
+            print views_embed_view($viewName);
+            ?>
             
           </div>
 

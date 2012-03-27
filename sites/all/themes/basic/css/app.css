@@ -251,10 +251,14 @@ x-moz-box-sizing: border-box;
 
 /* main page titles */
 h1.title{
-  background-color:#ccc;
-  padding:5px;
-  border-bottom: 2px solid #333;
-  color:#424242;
+  xbackground-color:#ccc;
+  xpadding:5px;
+  xxborder-bottom: 2px solid #333;
+  xcolor:#424242;
+}
+
+#content-header{
+  padding:10px;
 }
 
 
@@ -270,6 +274,74 @@ h1.title{
 }
 
 
+
+/* programs */
+h1.title{
+  font-size:28px;
+  border-bottom:1px solid #ccc;
+}
+
+.program-title{
+  text-align: center;
+}
+.program-image{
+  margin:0 auto;
+  width: 350px;
+  margin-bottom:20px;
+}
+
+.program-image img{
+  border:1px solid #ccc;
+}
+
+/* blog */
+.page-blog-posts .view-blog-posts .view-content .odd{
+  margin-bottom:30px;
+  border-bottom:1px dotted #ccc;
+}
+.page-blog-posts .view-blog-posts .view-content .even{
+  margin-bottom:30px;
+  border-bottom:1px dotted #ccc;
+}
+
+h2.blog-title{
+  font-size: 24px;
+  line-height: 20px;
+  margin-bottom:12px;
+}
+.blog-title a{
+  color: #3F312E;
+}
+.blog-title a:hover{
+  text-decoration: underline;
+}
+
+.blog-image{
+  margin-bottom: 10px;
+}
+.blog-image img{
+  border:1px solid #ccc;
+}
+
+/* blog block */
+#block-views-blog_posts-block .view-content .odd{
+  border-bottom:1px dotted #ccc;
+}
+#block-views-blog_posts-block .view-content .even{
+  border-bottom:1px dotted #ccc;
+}
+
+/* webform */
+.webform-component-textarea label{
+  font-weight:bold;
+}
+
+
+/* comment */
+h2.comment-form{
+  font-size:20px;
+  margin-top:30px;
+}
 /* -----------------------------------------
    Shared Styles
 ----------------------------------------- */
