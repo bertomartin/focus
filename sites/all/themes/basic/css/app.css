@@ -114,13 +114,19 @@ h1.welcome{
   margin-right:10px;
 }
 .main-content .side-content{
-  background-color: #e17628;
+  xbackground-color: #e17628;
   color:#fff;
   xtext-align:center;
   xpadding:5px;
   padding-bottom:5px;
   
 }
+.main-content .side-content .block-views{
+  background-color: #e17628;
+  margin-bottom:15px;
+}
+
+
 .main-content .side-content .content{
   background-color:inherit;
 }
@@ -297,11 +303,15 @@ h1.title{
 /* blog */
 .page-blog-posts .view-blog-posts .view-content .odd{
   margin-bottom:30px;
-  border-bottom:1px dotted #ccc;
+  clear:left;
+  clear:right;
+  xborder-bottom:1px dotted #ccc;
 }
 .page-blog-posts .view-blog-posts .view-content .even{
   margin-bottom:30px;
-  border-bottom:1px dotted #ccc;
+  xborder-bottom:1px dotted #ccc;
+  clear:left;
+  clear:right;
 }
 
 h2.blog-title{
@@ -318,17 +328,27 @@ h2.blog-title{
 
 .blog-image{
   margin-bottom: 10px;
+  float:right;
+  margin-left:10px;
 }
 .blog-image img{
   border:1px solid #ccc;
 }
 
+.blog-body{
+
+}
+
 /* blog block */
+#block-views-blog_posts-block .view-content h3.blog-title{
+  font-size:17px;
+}
+
 #block-views-blog_posts-block .view-content .odd{
-  border-bottom:1px dotted #ccc;
+  xborder-bottom:1px dotted #ccc;
 }
 #block-views-blog_posts-block .view-content .even{
-  border-bottom:1px dotted #ccc;
+  xborder-bottom:1px dotted #ccc;
 }
 
 /* webform */
@@ -341,6 +361,45 @@ h2.blog-title{
 h2.comment-form{
   font-size:20px;
   margin-top:30px;
+}
+
+/* programs front page */
+.programs-snippet{
+  
+}
+.programs-snippet .node-programs{
+  background-color:#F9F9F9;
+  xpadding:2px;
+  margin-bottom:10px;
+  border:1px solid #E8E8E8;
+}
+
+.programs-snippet .node-programs .group-left .field-item{
+  padding:5px;
+}
+.programs-snippet .node-programs .group-right .field-item img{
+  border:1px solid #333;
+}
+.programs-snippet .node-programs h2{
+  color:#e17628;
+  background-color:#333;
+  padding:5px;
+}
+
+
+
+/* comments */
+#comments{
+  margin-top:50px;
+}
+#comments h2.title{
+  font-size:20px;
+  color: #e17628
+}
+.comment{
+  margin-bottom:20px;
+  padding-bottom:10px;
+  border-bottom:1px solid #ccc;
 }
 /* -----------------------------------------
    Shared Styles

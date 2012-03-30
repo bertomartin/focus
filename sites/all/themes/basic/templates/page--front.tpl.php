@@ -75,10 +75,24 @@
             	<?php if(drupal_is_front_page()) {unset($page['content']['system_main']['default_message']);} ?>
                        
              <?php //print render($page['content']) ?>
-            <?php
-            $viewName = 'welcome';
-            print views_embed_view($viewName);
-            ?>
+            
+            <div class="main-content">
+              <?php
+              $viewName = 'welcome';
+              print views_embed_view($viewName);
+              ?>
+            </div> 
+            
+            <div class="programs-snippet">
+              <?php print views_embed_view("programs", "block"); ?>
+            </div>
+            
+            <div class="testimonials">
+             <!-- <h3>Recent Testimonial</h3>-->
+              <?php //print views_embed_view("testimonial"); ?>
+            </div>
+            
+            
             
           </div>
 

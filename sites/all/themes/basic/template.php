@@ -37,7 +37,15 @@ function basic_preprocess_page(&$vars, $hook) {
 function basic_preprocess_node(&$vars) {
   // Add a striping class.
   $vars['classes_array'][] = 'node-' . $vars['zebra'];
+  
+  $vars['submitted'] =  t('Submitted on !datetime by !username', 
+		array(
+		'!username' => $vars['name'], 
+		'!datetime' => $vars['date'],
+		));
 }
+
+
 
 function basic_preprocess_block(&$vars, $hook) {
   // Add a striping class.

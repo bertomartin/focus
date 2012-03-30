@@ -8,8 +8,10 @@
     <?php endif; ?>
     
     <?php print $picture ?>
+      
+      <?php //print $vars; ?>
 	    
-    <span class="submitted"><?php print $created; ?> — <?php print $author; ?></span>
+    <span class="submitted"><?php //print $created; ?> <?php //print $author; ?></span>
     
     <div class="content">
       <?php 
