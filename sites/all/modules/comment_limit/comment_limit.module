@@ -1,0 +1,107 @@
+<?php
+
+/**
+ * @file
+ * Comment limit - Limit comments per node type
+ */
+
+/**
+ * Implements hook_permission().
+ */
+function comment_limit_permission() {
+  return array(
+    'bypass comment limit' => array(
+      'title' => t('Bypass comment limit'), 
+      'description' => t('Allows a user to bypass the limit set on comments.'),
+    ),
+  );
+}
+
+/**
+ * Implement hook_form_FORM-ID-alter().
+ */
+function comment_limit_form_node_type_form_alter(&$form, &$form_state, $form_id) {
+  $form['comment']['comment_limit'] = array(
+    '#type' => 'textfield',
+    '#title' => t('Limit'),
+    '#size' => 5,
+    '#description' => t('Limit per user comments to the given value, e.g. <em>5</em> or <em>10</em>, give <em>0</em> for no limit.'),
+    '#default_value' => variable_get('comment_limit_' . $form['#node_type']->type, 0),
+  );
+}
+
+/**
+ * Implements hook_node_load().
+ */
+function comment_limit_node_load($nodes, $types) {
+  global $user;
+
+  // Don't check for limits if user has perm to bypass
+  // Or if they can't post comments at all
+  if (user_access('bypass comment limit') || !user_access('post comments')) {
+    return;
+  }
+
+  foreach ($nodes as $node) {
+    $node->comment_limit = FALSE;
+    // Check for limit and remove form
+    if ($result = comment_limit_reached($node, $user)) {
+      // Close comments
+      $node->comment = COMMENT_NODE_CLOSED;
+      // Set comment_limit status.
+      $node->comment_limit = TRUE;
+    }
+  }
+}
+
+/**
+ * Implements hook_node_view().
+ */
+function comment_limit_node_view($node, $view_mode, $langcode) {
+  if (isset($node->comment_limit) && $node->comment_limit) {
+    // Explain what we've done here.
+    // Mimic the validation made by the comment module
+    if ($node->comment && $view_mode == 'full' && node_is_page($node) && empty($node->in_preview)) {
+      $node->content['comments']['comment_form'] = array(
+        '#markup' => t('You have reached the comment limit for this content.'),
+      );
+    }
+  }
+}
+
+/**
+ * Get comment limit for this node type
+ */
+function comment_limit_get($node_type) {
+  return variable_get('comment_limit_' . $node_type, 0);
+}
+
+/**
+ * Get comment limit for this node and user
+ */
+function comment_limit_count_comments($nid, $uid) {
+
+  $count = 0;
+
+  $query = new EntityFieldQuery;
+  $result = $query
+    ->entityCondition('entity_type', 'comment')
+    ->propertyCondition('nid', $nid)
+    ->propertyCondition('uid', $uid)
+    ->execute();
+
+  if (isset($result['comment'])) {
+    $count = count($result['comment']);
+  }
+
+  return $count;
+}
+
+/**
+ * Has the limit been reached
+ */
+function comment_limit_reached($node, $user) {
+  $limit = comment_limit_get($node->type);
+  $comment_count = comment_limit_count_comments($node->nid, $user->uid);
+  return ($limit != 0 && ($limit <= $comment_count)) ? TRUE : FALSE;
+}

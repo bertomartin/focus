@@ -1,0 +1,10 @@
+name = Comment limit
+description = Limits comments per node type
+core = 7.x
+dependencies[] = comment
+; Information added by drupal.org packaging script on 2011-08-25
+version = "7.x-1.x-dev"
+core = "7.x"
+project = "comment_limit"
+datestamp = "1314230959"
+

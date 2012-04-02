@@ -1,0 +1,13 @@
+<?php
+
+/**
+ * @file
+ * Comment limit - Limit comments per node type
+ */
+
+/**
+ * Implements hook_uninstall().
+ */
+function comment_limit_uninstall() {
+  db_query("DELETE FROM {variable} WHERE name LIKE 'comment_limit%'");
+}
