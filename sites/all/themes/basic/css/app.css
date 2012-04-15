@@ -12,7 +12,7 @@ body{
   background-image: url(../images/bg.jpg);
   background-repeat:repeat;
   height: 100%;
-  font-size: 1.3em;
+  font-size: 1.6em;
 }
 .row{
   max-width: 1020px;
@@ -58,7 +58,7 @@ border-radius: 5px;
 
 font-weight:bold;
 color:#fff;
-font-size: 1.6em;
+font-size: 1.2em;
 
 padding-top:10px;
 padding-bottom: 14px;
@@ -301,23 +301,40 @@ h1.title{
 }
 
 /* blog */
+.view-blog-posts .node-blog{
+  border-bottom:1px solid #ccc;
+  margin-bottom:15px;
+}
+.view-blog-posts .group-left{
+  width:37%;
+}
+.view-blog-posts .group-right{
+  width:63%;
+}
+
 .page-blog-posts .view-blog-posts .view-content .odd{
-  margin-bottom:30px;
+  xmargin-bottom:30px;
   clear:left;
   clear:right;
   xborder-bottom:1px dotted #ccc;
 }
 .page-blog-posts .view-blog-posts .view-content .even{
-  margin-bottom:30px;
+  xmargin-bottom:30px;
   xborder-bottom:1px dotted #ccc;
   clear:left;
   clear:right;
 }
 
+.page-blog-posts .field-name-post-date{
+  margin-bottom:10px;
+  font-size:11px;
+  color:#999;
+}
+
 h2.blog-title{
   font-size: 24px;
   line-height: 20px;
-  margin-bottom:12px;
+  margin-bottom:5px;
 }
 .blog-title a{
   color: #3F312E;
@@ -329,8 +346,11 @@ h2.blog-title{
 
 .blog-image{
   margin-bottom: 10px;
-  float:right;
-  margin-left:10px;
+  xfloat:right;
+  xmargin-left:10px;
+  
+  float:left;
+  xmargin-right: 12px;
 }
 .blog-image img{
   border:1px solid #ccc;
