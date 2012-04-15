@@ -135,7 +135,7 @@ h1.welcome{
   color:#fff;
   font-size: 2.5em;
 }
-#block-views-about_me-block h3, #block-views-contact_me-block h2 a{display:none;}
+#block-views-about_me-block h3, #block-views-contact_me-block h2 a{xdisplay:none;}
 /*.main-content .side-content h2 a, .main-content .side-content h3 a{
   display:none;
 }*/
