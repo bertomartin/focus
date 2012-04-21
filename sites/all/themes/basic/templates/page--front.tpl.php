@@ -14,15 +14,14 @@
            <?php endif; ?>
           <ul class="social">
             <li><a href="#"><img src="<?php echo $theme_path ?>/images/facebook.jpg"></a></li>
-            <li><a href="#"><img src="<?php echo $theme_path ?>/images/twitter.jpg"></a></li>
             <li><a href="#"><img src="<?php echo $theme_path ?>/images/youtube.jpg"></a></li>
-            <li><a href="#"><img src="<?php echo $theme_path ?>/images/feed.jpg"></a></li>
+            <li><a href="/blog-posts/feed"><img src="<?php echo $theme_path ?>/images/feed.jpg"></a></li>
           </ul>
  
         </div><!-- /four columns -->
       </div><!-- /row -->
       <div class="row navrow">
-        <div class="eight columns offset-by-four">
+        <div class="twelve columns">
           <!--<ul class="navbar">-->
             <?php print theme('links', array('links' => $main_menu, 'attributes' => array('id' => 'primary', 'class' => array('links', 'clearfix', 'main-menu, navbar')))); ?>
             <!--<li><a href="#">Home</a></li>
@@ -120,7 +119,6 @@
           
               
               <?php print render($page['footer']); ?>
-              <div>&COPY;Focused Fitness NYC, 2012</div>
           
         </div>
       </div>

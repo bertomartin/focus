@@ -14,6 +14,9 @@ body{
   height: 100%;
   font-size: 1.6em;
 }
+p{
+  line-height: 24px;
+}
 .row{
   max-width: 1020px;
 }
@@ -136,9 +139,11 @@ h1.welcome{
   font-size: 2.5em;
 }
 #block-views-about_me-block h3, #block-views-contact_me-block h2 a{xdisplay:none;}
+.view-contact-me h2{display: none;}
 /*.main-content .side-content h2 a, .main-content .side-content h3 a{
   display:none;
 }*/
+#block-views-contact_me-block h2{xdisplay:none;}
 
 .region-sidebar-second{
   xpadding:10px;
@@ -190,12 +195,15 @@ margin-top:30px;
 
 
 }
+.containerfooter p{
+  margin-bottom: 0;
+}
 
 #block-menu-menu-footer-menu{
   
 }
 #block-menu-menu-footer-menu ul{
-  margin-left: 0;
+  margin: 0;
   xmargin-bottom: 18px;
   list-style: none;
   text-align: center;
@@ -302,7 +310,7 @@ h1.title{
 
 /* blog */
 .view-blog-posts .node-blog{
-  border-bottom:1px solid #ccc;
+  border-bottom:4px solid #eee;
   margin-bottom:15px;
 }
 .view-blog-posts .group-left{
@@ -337,8 +345,11 @@ h2.blog-title{
   margin-bottom:5px;
 }
 .blog-title a{
-  color: #3F312E;
-  font-size: 140%;
+  xcolor: #3F312E;
+  xfont-size: 140%;
+  color: #3B3B3B;
+  font-size: 24px;
+  text-decoration: underline;
 }
 .blog-title a:hover{
   text-decoration: underline;
@@ -358,6 +369,10 @@ h2.blog-title{
 
 .blog-body{
 
+}
+
+.page-blog-posts ul.inline{
+  display:block;
 }
 
 /* blog block */
@@ -423,6 +438,8 @@ h2.comment-form{
   padding-bottom:10px;
   border-bottom:1px solid #ccc;
 }
+
+#comments div span{font-size:11px;}
 
 
 
